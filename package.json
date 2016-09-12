@@ -1,0 +1,38 @@
+{
+  "name": "ecs-bootstrap",
+  "version": "0.0.1",
+  "description": "Start ECS tasks when EC2s bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint index.js test bin",
+    "test": "nyc tape test/*.test.js",
+    "coverage": "nyc --reporter html tape test/*.test.js"
+  },
+  "bin": {
+    "ecs-bootstrap": "bin/ecs-bootstrap.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/ecs-bootstrap.git"
+  },
+  "keywords": [
+    "ECS",
+    "AWS"
+  ],
+  "author": "Mapbox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/ecs-bootstrap/issues"
+  },
+  "homepage": "https://github.com/mapbox/ecs-bootstrap#readme",
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "nyc": "^8.1.0",
+    "opener": "^1.4.1",
+    "sinon": "^1.17.5",
+    "tape": "^4.6.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.6.1"
+  }
+}
